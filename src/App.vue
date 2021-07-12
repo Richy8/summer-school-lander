@@ -1,32 +1,38 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+    <transition name="fade" mode="out-in">
+      <router-view />
+    </transition>
+
+     <!-- GRADELY PORTAL TARGET -->
+    <portal-target name="gradely-modals"> </portal-target>
   </div>
 </template>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+<script>
+export default {
+  name: "App",
+
+  metaInfo: {
+    title: "Summer School",
+    titleTemplate: "%s - Gradely.Ng",
+    htmlAttrs: {
+      lang: "en",
+      amp: true,
+    },
+  },
 }
+</script>
 
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
+<style lang="scss">
+.fade-enter {
+  opacity: 0;
+}
+.fade-enter-active {
+  transition: opacity 0.3s ease-in;
+}
+.fade-leave-active {
+  transition: opacity 0.3s ease-out;
+  opacity: 0;
 }
 </style>

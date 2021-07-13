@@ -45,6 +45,15 @@ export default {
   height: 80vh;
   margin-bottom: toRem(140);
 
+  @include breakpoint-down(sm) {
+    margin-bottom: toRem(100);
+  }
+
+  @include breakpoint-down(xs) {
+    top: toRem(58);
+    margin-bottom: toRem(100);
+  }
+
   img {
     @include background-cover;
   }
@@ -78,40 +87,44 @@ export default {
       @include font-height(42, 57);
       font-weight: 700;
 
-      @include breakpoint-down(lg) {
-        @include font-height(38, 52);
+      @include breakpoint-down(xl) {
+        @include font-height(37, 48);
       }
 
-      @include breakpoint-down(xs) {
-        @include font-height(34, 44);
+      @include breakpoint-down(md) {
+        @include font-height(35, 45);
       }
 
-      @include breakpoint-custom-down(380) {
+      @include breakpoint-down(sm) {
         @include font-height(32, 42);
       }
 
-      @include breakpoint-custom-down(350) {
+      @include breakpoint-down(xs) {
+        @include font-height(30, 40);
+      }
+
+      @include breakpoint-custom-down(380) {
         @include font-height(28, 38);
+      }
+
+      @include breakpoint-custom-down(350) {
+        @include font-height(25, 34);
       }
     }
 
     .meta-text {
       @include font-height(21, 32);
 
-      @include breakpoint-down(lg) {
-        @include font-height(20, 28);
+      @include breakpoint-down(xl) {
+        @include font-height(18, 27);
       }
 
-      @include breakpoint-down(md) {
-        @include font-height(20, 30);
+      @include breakpoint-down(sm) {
+        @include font-height(17, 27);
       }
 
       @include breakpoint-down(xs) {
-        @include font-height(18.5, 30);
-      }
-
-      @include breakpoint-custom-down(350) {
-        @include font-height(17.5, 28);
+        @include font-height(14, 25);
       }
     }
 
@@ -120,14 +133,14 @@ export default {
       font-size: toRem(14);
       font-weight: 700;
 
-      @include breakpoint-down(xs) {
-        padding: toRem(14) toRem(33);
-        font-size: toRem(13);
+      @include breakpoint-down(sm) {
+        padding: toRem(12) toRem(26);
+        font-size: toRem(12);
       }
 
       @include breakpoint-custom-down(380) {
-        padding: toRem(12.5) toRem(30);
-        font-size: toRem(12);
+        padding: toRem(11) toRem(22);
+        font-size: toRem(11);
       }
     }
   }

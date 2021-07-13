@@ -1,30 +1,35 @@
 <template>
   <div>
     <!-- Renders the top section of the landing page -->
-    <hero-banner/>
+    <hero-banner />
 
     <!-- INTRO SECTION  -->
-    <intro-content/>
+    <intro-content />
+
+    <!-- SERVICES  -->
+    <service-section />
+
+    <!-- FACILITATORS  -->
+    <partner-block />
   </div>
 </template>
 
-
 <script>
-import heroBanner from '@/components/heroSectionComps/heroBanner'
-import introContent from '@/components/introSectionComps/introContent'
-// import courseCards from '@/components/serviceComps/courseCards'
+import heroBanner from "@/components/heroSectionComps/heroBanner";
+import introContent from "@/components/introSectionComps/introContent";
+import serviceSection from "@/components/serviceComps/serviceSection";
+import partnerBlock from "@/components/partnersComps/partnerBlock";
 
 export default {
-  name: 'summerschool',
+  name: "summerschool",
 
   components: {
     heroBanner,
     introContent,
-    // courseCards
-  }
-}
-
+    serviceSection,
+    partnerBlock,
+  },
+};
 </script>
 
-<style lang="scss" scoped>
-</style>
+<style lang="scss" scoped></style>
